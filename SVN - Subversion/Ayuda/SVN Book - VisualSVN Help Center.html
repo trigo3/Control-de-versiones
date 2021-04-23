@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://www.visualsvn.com/support/svnbook/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><link rel="icon" href="https://www.visualsvn.com/favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="https://www.visualsvn.com/favicon.ico" type="image/x-icon"><link href="https://www.visualsvn.com/rss.xml" rel="alternate" title="VisualSVN News" type="application/rss+xml"><link rel="search" type="application/opensearchdescription+xml" title="VisualSVN Site Search" href="https://www.visualsvn.com/visualsvn-search.xml"><meta name="robots" content="index,follow"><meta property="og:image" content="https://www.visualsvn.com/images/opengraph-image.png">
+  <meta name="viewport" content="width=device-width,initial-scale=0.7">
+  <link type="text/css" href="./SVN Book - VisualSVN Help Center_files/style.css" rel="stylesheet">
+
+  
+  <link type="text/css" href="./SVN Book - VisualSVN Help Center_files/svnbook.css" rel="stylesheet">
+
+  
+
+<title>
+	SVN Book - VisualSVN Help Center
+</title></head>
+<body>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none">
+    <defs>
+      <symbol id="linkedin-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"><!-- Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>
+      </symbol>
+      <symbol id="twitter-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><!-- Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+      </symbol>
+      <symbol id="facebook-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor"><!-- Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>
+      </symbol>
+      <symbol id="rss-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"><!-- Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M128.081 415.959c0 35.369-28.672 64.041-64.041 64.041S0 451.328 0 415.959s28.672-64.041 64.041-64.041 64.04 28.673 64.04 64.041zm175.66 47.25c-8.354-154.6-132.185-278.587-286.95-286.95C7.656 175.765 0 183.105 0 192.253v48.069c0 8.415 6.49 15.472 14.887 16.018 111.832 7.284 201.473 96.702 208.772 208.772.547 8.397 7.604 14.887 16.018 14.887h48.069c9.149.001 16.489-7.655 15.995-16.79zm144.249.288C439.596 229.677 251.465 40.445 16.503 32.01 7.473 31.686 0 38.981 0 48.016v48.068c0 8.625 6.835 15.645 15.453 15.999 191.179 7.839 344.627 161.316 352.465 352.465.353 8.618 7.373 15.453 15.999 15.453h48.068c9.034-.001 16.329-7.474 16.005-16.504z"></path></svg>
+      </symbol>
+      <symbol id="download-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><!-- Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"></path></svg>
+      </symbol>
+    </defs>
+  </svg>
+  <div id="wrap">
+    <div id="header">
+      
+  <a href="https://www.visualsvn.com/support/" title="Support" class="support">SUPPORT</a>
+  <div id="logo2">
+    <div class="visualsvn"> </div>
+    <div class="slogan"> </div>
+  </div>
+
+    </div>
+    <div id="main">
+      
+  <div class="main_mark">
+  </div>
+
+
+      <div id="content-wrap">
+      <div class="main_head">
+        <div class="path">
+          
+  <div style="float:left">
+  
+    <a href="https://www.visualsvn.com/support/" title="">SUPPORT</a> // SVN Book
+  
+  </div>
+  <div class="navigation">
+    
+  </div>
+
+        </div>
+      </div>
+      <div class="main_cont" role="main">
+        
+  
+
+        <div class="main_wrap">
+          <div class="text">
+              
+  <div class="svnbook">
+    <div class="book" title="Version Control with Subversion">
+<div class="titlepage">
+<div>
+<div><h1 class="title">
+<a name="svn"></a>Version Control with Subversion</h1></div>
+<div><div class="authorgroup">
+<div class="author"><h3 class="author">
+<span class="firstname">Ben</span> <span class="surname">Collins-Sussman</span>
+</h3></div>
+<div class="author"><h3 class="author">
+<span class="firstname">Brian W.</span> <span class="surname">Fitzpatrick</span>
+</h3></div>
+<div class="author"><h3 class="author">
+<span class="firstname">C. Michael</span> <span class="surname">Pilato</span>
+</h3></div>
+</div></div>
+<div><p class="copyright">Copyright © 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016 Ben Collins-Sussman, Brian W. Fitzpatrick, C. Michael Pilato</p></div>
+</div>
+<hr>
+</div>
+<div class="toc"><dl>
+<dt><span class="preface"><a href="https://www.visualsvn.com/support/svnbook/foreword/">Foreword</a></span></dt>
+<dt><span class="preface"><a href="https://www.visualsvn.com/support/svnbook/preface/">Preface</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/intro/whatis/">What Is Subversion?</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/preface/audience/">Audience</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/preface/howread/">How to Read This Book</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/preface/organization/">Organization of This Book</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/preface/free/">This Book Is Free</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/preface/acks/">Acknowledgments</a></span></dt>
+</dl></dd>
+<dt><span class="part"><a href="https://www.visualsvn.com/support/svnbook/content/">I. Getting to Know Subversion</a></span></dt>
+<dd><dl>
+<dt><span class="chapter"><a href="https://www.visualsvn.com/support/svnbook/basic/">1. Fundamental Concepts</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/basic/version-control-basics/">Version Control Basics</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/basic/in-action/">Version Control the Subversion Way</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/basic/summary/">Summary</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="https://www.visualsvn.com/support/svnbook/tour/">2. Basic Usage</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/tour/help/">Help!</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/tour/importing/">Getting Data into Your Repository</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/tour/initial/">Creating a Working Copy</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/tour/cycle/">Basic Work Cycle</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/tour/history/">Examining History</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/tour/cleanup/">Sometimes You Just Need to Clean Up</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/tour/treeconflicts/">Dealing with Structural Conflicts</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/tour/summary/">Summary</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="https://www.visualsvn.com/support/svnbook/advanced/">3. Advanced Topics</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/tour/revs/specifiers/">Revision Specifiers</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/advanced/pegrevs/">Peg and Operative Revisions</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/advanced/props/">Properties</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/advanced/props/file-portability/">File Portability</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/advanced/props/special/ignore/">Ignoring Unversioned Items</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/advanced/props/special/keywords/">Keyword Substitution</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/advanced/sparsedirs/">Sparse Directories</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/advanced/locking/">Locking</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/advanced/externals/">Externals Definitions</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/advanced/changelists/">Changelists</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/serverconfig/netmodel/">Network Model</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/advanced/working-without-a-wc/">Working Without a Working Copy</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/advanced/summary/">Summary</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="https://www.visualsvn.com/support/svnbook/branchmerge/">4. Branching and Merging</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/branchmerge/whatis/">What's a Branch?</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/branchmerge/using/">Using Branches</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/branchmerge/basicmerging/">Basic Merging</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/branchmerge/advanced/">Advanced Merging</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/branchmerge/switchwc/">Traversing Branches</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/branchmerge/tags/">Tags</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/branchmerge/maint/">Branch Maintenance</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/branchmerge/commonpatterns/">Common Branching Patterns</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/advanced/vendorbr/">Vendor Branches</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/branchmerge/when/">To Branch or Not to Branch?</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/branchmerge/summary/">Summary</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="https://www.visualsvn.com/support/svnbook/reposadmin/">5. Repository Administration</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/reposadmin/basics/">The Subversion Repository, Defined</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/reposadmin/planning/">Strategies for Repository Deployment</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/reposadmin/create/">Creating and Configuring Your Repository</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/reposadmin/maint/">Repository Maintenance</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/reposadmin/maint/moving-and-removing/">Moving and Removing Repositories</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/reposadmin/summary/">Summary</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="https://www.visualsvn.com/support/svnbook/serverconfig/">6. Server Configuration</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/serverconfig/overview/">Overview</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/serverconfig/choosing/">Choosing a Server Configuration</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/serverconfig/svnserve/">svnserve, a Custom Server</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/serverconfig/httpd/">httpd, the Apache HTTP Server</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/serverconfig/pathbasedauthz/">Path-Based Authorization</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/serverconfig/operational-logging/">High-level Logging</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/serverconfig/optimization/">Server Optimization</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/serverconfig/multimethod/">Supporting Multiple Repository Access Methods</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="https://www.visualsvn.com/support/svnbook/customization/">7. Customizing Your Subversion Experience</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/advanced/confarea/">Runtime Configuration Area</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/advanced/l10n/">Localization</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/advanced/externaleditors/">Using External Editors</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/advanced/externaldifftools/">Using External Differencing and Merge Tools</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/customization/summary/">Summary</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="https://www.visualsvn.com/support/svnbook/developer/">8. Embedding Subversion</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/developer/layerlib/">Layered Library Design</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/developer/usingapi/">Using the APIs</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/developer/summary/">Summary</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="part"><a href="https://www.visualsvn.com/support/svnbook/ref/">II. Subversion Command Reference</a></span></dt>
+<dd><dl>
+<dt><span class="reference"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/">I. svn Reference—Subversion Command-Line Client</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/add/">svn add</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/blame/">svn blame (praise, annotate, ann)</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/cat/">svn cat</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/changelist/">svn changelist (cl)</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/checkout/">svn checkout (co)</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/cleanup/">svn cleanup</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/commit/">svn commit (ci)</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/copy/">svn copy (cp)</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/delete/">svn delete (del, remove, rm)</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/diff/">svn diff (di)</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/export/">svn export</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/help/">svn help (h, ?)</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/import/">svn import</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/info/">svn info</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/list/">svn list (ls)</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/lock/">svn lock</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/log/">svn log</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/merge/">svn merge</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/mergeinfo/">svn mergeinfo</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/mkdir/">svn mkdir</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/move/">svn move (mv)</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/patch/">svn patch</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/propdel/">svn propdel (pdel, pd)</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/propedit/">svn propedit (pedit, pe)</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/propget/">svn propget (pget, pg)</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/proplist/">svn proplist (plist, pl)</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/propset/">svn propset (pset, ps)</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/relocate/">svn relocate</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/resolve/">svn resolve</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/resolved/">svn resolved</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/revert/">svn revert</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/status/">svn status (stat, st)</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/switch/">svn switch (sw)</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/unlock/">svn unlock</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/update/">svn update (up)</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svn/c/upgrade/">svn upgrade</a></span><span class="refpurpose"></span>
+</dt>
+</dl></dd>
+<dt><span class="reference"><a href="https://www.visualsvn.com/support/svnbook/ref/svnadmin/">II. svnadmin Reference—Subversion Repository Administration</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnadmin/c/crashtest/">svnadmin crashtest</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnadmin/c/create/">svnadmin create</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnadmin/c/deltify/">svnadmin deltify</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnadmin/c/dump/">svnadmin dump</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnadmin/c/freeze/">svnadmin freeze</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnadmin/c/help/">svnadmin help (h, ?)</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnadmin/c/hotcopy/">svnadmin hotcopy</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnadmin/c/list-dblogs/">svnadmin list-dblogs</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnadmin/c/list-unused-dblogs/">svnadmin list-unused-dblogs</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnadmin/c/load/">svnadmin load</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnadmin/c/lock/">svnadmin lock</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnadmin/c/lslocks/">svnadmin lslocks</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnadmin/c/lstxns/">svnadmin lstxns</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnadmin/c/pack/">svnadmin pack</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnadmin/c/recover/">svnadmin recover</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnadmin/c/rmlocks/">svnadmin rmlocks</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnadmin/c/rmtxns/">svnadmin rmtxns</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnadmin/c/setlog/">svnadmin setlog</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnadmin/c/setrevprop/">svnadmin setrevprop</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnadmin/c/setuuid/">svnadmin setuuid</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnadmin/c/unlock/">svnadmin unlock</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnadmin/c/upgrade/">svnadmin upgrade</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnadmin/c/verify/">svnadmin verify</a></span><span class="refpurpose"></span>
+</dt>
+</dl></dd>
+<dt><span class="reference"><a href="https://www.visualsvn.com/support/svnbook/ref/svnlook/">III. svnlook Reference—Subversion Repository Examination</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnlook/c/author/">svnlook author</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnlook/c/cat/">svnlook cat</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnlook/c/changed/">svnlook changed</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnlook/c/date/">svnlook date</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnlook/c/diff/">svnlook diff</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnlook/c/dirs-changed/">svnlook dirs-changed</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnlook/c/filesize/">svnlook filesize</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnlook/c/help/">svnlook help (h, ?)</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnlook/c/history/">svnlook history</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnlook/c/info/">svnlook info</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnlook/c/lock/">svnlook lock</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnlook/c/log/">svnlook log</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnlook/c/propget/">svnlook propget (pget, pg)</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnlook/c/proplist/">svnlook proplist (plist, pl)</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnlook/c/tree/">svnlook tree</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnlook/c/uuid/">svnlook uuid</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnlook/c/youngest/">svnlook youngest</a></span><span class="refpurpose"></span>
+</dt>
+</dl></dd>
+<dt><span class="reference"><a href="https://www.visualsvn.com/support/svnbook/ref/svnserve/">IV. svnserve Reference—Custom Subversion Server</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnserve/re/">svnserve</a></span><span class="refpurpose"></span>
+</dt></dl></dd>
+<dt><span class="reference"><a href="https://www.visualsvn.com/support/svnbook/ref/svnversion/">V. svnversion Reference—Subversion Working Copy Version Info</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnversion/re/">svnversion</a></span><span class="refpurpose"></span>
+</dt></dl></dd>
+<dt><span class="reference"><a href="https://www.visualsvn.com/support/svnbook/ref/svnsync/">VI. svnsync Reference—Subversion Repository Mirroring</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnsync/c/copy-revprops/">svnsync copy-revprops</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnsync/c/help/">svnsync help</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnsync/c/info/">svnsync info</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnsync/c/init/">svnsync initialize (init)</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnsync/c/sync/">svnsync synchronize (sync)</a></span><span class="refpurpose"></span>
+</dt>
+</dl></dd>
+<dt><span class="reference"><a href="https://www.visualsvn.com/support/svnbook/ref/svnrdump/">VII. svnrdump Reference—Remote Subversion Repository Data Migration</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnrdump/c/dump/">svnrdump dump</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnrdump/c/help/">svnrdump help</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnrdump/c/load/">svnrdump load</a></span><span class="refpurpose"></span>
+</dt>
+</dl></dd>
+<dt><span class="reference"><a href="https://www.visualsvn.com/support/svnbook/ref/svndumpfilter/">VIII. svndumpfilter Reference—Subversion History Filtering</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svndumpfilter/commands/c/exclude/">svndumpfilter exclude</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svndumpfilter/commands/c/include/">svndumpfilter include</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svndumpfilter/commands/c/help/">svndumpfilter help</a></span><span class="refpurpose"></span>
+</dt>
+</dl></dd>
+<dt><span class="reference"><a href="https://www.visualsvn.com/support/svnbook/ref/svnmucc/">IX. svnmucc Reference—Subversion Multiple URL Command Client</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/svnmucc/re/">svnmucc</a></span><span class="refpurpose"></span>
+</dt></dl></dd>
+<dt><span class="reference"><a href="https://www.visualsvn.com/support/svnbook/ref/reposhooks/">X. Subversion Repository Hook Reference</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/reposhooks/start-commit/">start-commit</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/reposhooks/pre-commit/">pre-commit</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/reposhooks/post-commit/">post-commit</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/reposhooks/pre-revprop-change/">pre-revprop-change</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/reposhooks/post-revprop-change/">post-revprop-change</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/reposhooks/pre-lock/">pre-lock</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/reposhooks/post-lock/">post-lock</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/reposhooks/pre-unlock/">pre-unlock</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="https://www.visualsvn.com/support/svnbook/ref/reposhooks/post-unlock/">post-unlock</a></span><span class="refpurpose"></span>
+</dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="part"><a href="https://www.visualsvn.com/support/svnbook/apps/">III. Appendices</a></span></dt>
+<dd><dl>
+<dt><span class="appendix"><a href="https://www.visualsvn.com/support/svnbook/intro/">A. Subversion Quick-Start Guide</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/intro/install/">Installing Subversion</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/intro/quickstart/">High-Speed Tutorial</a></span></dt>
+</dl></dd>
+<dt><span class="appendix"><a href="https://www.visualsvn.com/support/svnbook/forcvs/">B. Subversion for CVS Users</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/forcvs/revnums/">Revision Numbers Are Different Now</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/forcvs/directories/">Directory Versions</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/forcvs/disconnected/">More Disconnected Operations</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/forcvs/status-vs-update/">Distinction Between Status and Update</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/forcvs/branches-and-tags/">Branches and Tags</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/forcvs/properties/">Metadata Properties</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/forcvs/conflicts/">Conflict Resolution</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/forcvs/binary-and-trans/">Binary Files and Translation</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/forcvs/modules/">Versioned Modules</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/forcvs/auth/">Authentication</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/forcvs/convert/">Converting a Repository from CVS to Subversion</a></span></dt>
+</dl></dd>
+<dt><span class="appendix"><a href="https://www.visualsvn.com/support/svnbook/webdav/">C. WebDAV and Autoversioning</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/webdav/basic/">What Is WebDAV?</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/webdav/autoversioning/">Autoversioning</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/webdav/clients/">Client Interoperability</a></span></dt>
+</dl></dd>
+<dt><span class="appendix"><a href="https://www.visualsvn.com/support/svnbook/berkeleydb/">D. The Berkeley DB Legacy Filesystem</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/berkeleydb/configuration/">Configuring Your Berkeley DB Environment</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/berkeleydb/limitations/">Limitations of Berkeley DB</a></span></dt>
+<dt><span class="sect1"><a href="https://www.visualsvn.com/support/svnbook/berkeleydb/maintenance/">Maintaining Berkeley DB Repositories</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="appendix"><a href="https://www.visualsvn.com/support/svnbook/copyright/">E. Copyright</a></span></dt>
+<dt><span class="index"><a href="https://www.visualsvn.com/support/svnbook/index/">Index</a></span></dt>
+</dl></div>
+</div>
+<div id="svn-footer">
+<hr>
+<p>
+        You are reading <em>Version Control with Subversion</em> (for Subversion 1.8),
+        by Ben Collins-Sussman, Brian W. Fitzpatrick, and C. Michael Pilato.<br>
+        This work is licensed under the
+        <a href="http://creativecommons.org/licenses/by/2.0/" rel="nofollow">
+          Creative Commons Attribution License v2.0
+        </a>.
+        To view a copy of this license, visit
+        <a href="http://creativecommons.org/licenses/by/2.0/" rel="nofollow">
+          Creative Commons site
+        </a> or send a letter to Creative Commons, 559 Nathan Abbott Way,
+        Stanford, California 94305, USA.<br>
+        To submit comments, corrections, or other contributions to the text,
+        please visit <a href="http://www.svnbook.com/" rel="nofollow">http://www.svnbook.com/</a>.
+      </p>
+</div>
+  </div>
+
+            <div class="clear">
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="main_foot">
+        
+          <footer>
+          
+            <div class="copy">
+              © 2005-2021 VisualSVN Software Ltd.<br>
+              All rights reserved.<br>
+              <a href="https://www.visualsvn.com/company/tos/">Terms of Service</a> &nbsp;
+              <a href="https://www.visualsvn.com/company/privacy-policy/">Privacy Policy</a>
+            </div>
+          
+          <div class="footer-social-buttons-area">
+          
+            <a class="social-button" title="Share on LinkedIn" href="https://www.linkedin.com/shareArticle?mini=true&amp;title=&amp;url=https%3a%2f%2fwww.visualsvn.com%2fsupport%2fsvnbook%2f&amp;summary=" target="_blank">
+                <svg width="14" height="16"><use xlink:href="#linkedin-icon"></use></svg>
+              </a>
+              <a class="social-button" title="Tweet" href="https://twitter.com/intent/tweet?text=&amp;via=visualsvn&amp;url=https%3a%2f%2fwww.visualsvn.com%2fsupport%2fsvnbook%2f" target="_blank">
+                <svg width="16" height="16"><use xlink:href="#twitter-icon"></use></svg>
+              </a>
+              <a class="social-button" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.visualsvn.com%2fsupport%2fsvnbook%2f" target="_blank">
+                <svg width="10" height="16"><use xlink:href="#facebook-icon"></use></svg>
+              </a>
+            
+          </div>
+          </footer>
+        
+      </div>
+    </div>
+    <div id="sidebar">
+      <nav>
+      <div class="menu">
+        <div class="hr">
+
+</div><a href="https://www.visualsvn.com/visualsvn/">Visual<b>SVN</b></a><div class="hr">
+
+</div><a href="https://www.visualsvn.com/server/">Visual<b>SVN</b> Server</a><div class="hr">
+
+</div><a href="https://www.visualsvn.com/company/">Company</a><div class="hr">
+
+</div><a href="https://www.visualsvn.com/support/">Support</a><ul>
+	<li><a href="https://www.visualsvn.com/support/">search</a></li><li><a href="https://www.visualsvn.com/support/feedback/">submit request</a></li><li><a href="https://www.visualsvn.com/support/svnbook/" class="cur">svn book //</a></li>
+</ul><div class="hr">
+
+</div>
+      </div>
+
+      
+
+<div class="block">
+  <div class="block_cont">
+    <form action="https://www.visualsvn.com/support/" id="cse-search-box" class="search">
+      <input type="text" id="search" name="q" size="31" placeholder="Search" class="inptext">
+      <input type="submit" value="" class="submit button">
+      <div class="clear"></div>
+    </form>
+  </div>
+</div>
+
+      <div class="block">
+	<div class="block_cont news_block">
+		<a href="https://www.visualsvn.com/company/news/" class="title" title="news">News</a><div class="hr">
+
+		</div><p>Update to OpenSSL 1.1.1k</p><a href="https://www.visualsvn.com/company/news/update-to-openssl-1.1.1k" class="next">learn more</a><div class="hr">
+
+		</div><p>VisualSVN 7.3.2 Patch Released</p><a href="https://www.visualsvn.com/company/news/visualsvn-7.3.2-released" class="next">learn more</a><div class="hr">
+
+		</div><p>Update to Apache Subversion 1.14.1</p><a href="https://www.visualsvn.com/company/news/update-to-subversion-1.14.1" class="next">learn more</a><div class="hr">
+
+		</div><p>End of Support for VisualSVN Server 4.1.x version family</p><a href="https://www.visualsvn.com/company/news/visualsvn-server-4.1-end-of-support" class="next">learn more</a><div class="hr">
+
+		</div><a href="https://www.visualsvn.com/company/subscribe/" class="all_next" title="Subscribe to News">subscribe</a><a href="https://www.visualsvn.com/rss.xml" class="rss" title="RSS"><svg width="12.25" height="14"><use xlink:href="#rss-icon"></use></svg></a><div class="clear">
+
+		</div>
+	</div>
+</div>
+      
+      
+
+      <div class="">
+      </div>
+      </nav>
+    </div>
+  </div>
+
+
+
+</body></html>
